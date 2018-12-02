@@ -1,46 +1,64 @@
-\chapter{Wprowadzenie}
+\chapter{Ogólny opis systemu}
 \label{cha:wprowadzenie}
 
-\LaTeX~jest systemem składu umożliwiającym tworzenie dowolnego typu dokumentów (w~szczególności naukowych i technicznych) o wysokiej jakości typograficznej (\cite{Dil00}, \cite{Lam92}). Wysoka jakość składu jest niezależna od rozmiaru dokumentu -- zaczynając od krótkich listów do bardzo grubych książek. \LaTeX~automatyzuje wiele prac związanych ze składaniem dokumentów np.: referencje, cytowania, generowanie spisów (treśli, rysunków, symboli itp.) itd.
 
-\LaTeX~jest zestawem instrukcji umożliwiających autorom skład i wydruk ich prac na najwyższym poziomie typograficznym. Do formatowania dokumentu \LaTeX~stosuje \TeX a (wymiawamy 'tech' -- greckie litery $\tau$, $\epsilon$, $\chi$). Korzystając z~systemu składu \LaTeX~mamy za zadanie przygotować jedynie tekst źródłowy, cały ciężar składania, formatowania dokumentu przejmuje na siebie system.
-
-%---------------------------------------------------------------------------
-
-\section{Cele pracy}
+\section{Cel (przeznaczenie) systemu}
 \label{sec:celePracy}
 
+Celem systemu automatyczny parking jest umożliwienie komputerowej obsługi pobierania opłat za~pozostawienie pojazdu na parkingu na określony czas.
 
-Celem poniższej pracy jest zapoznanie studentów z systemem \LaTeX~w zakresie umożliwiającym im samodzielne, profesjonalne złożenie pracy dyplomowej w systemie \LaTeX.
+\section{Udziałowcy i użytkownicy}
 
-\subsection{Jakiś tytuł}
+\begin{list}{$\bullet$}{}
+\item Właściciel
+\item Klient
+\item Operator
+\end{list}
 
-\subsubsection{Jakiś tytuł w subsubsection}
+\section{Podstawowe cele udziałowców i użytkowników}
 
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|} \hline
+	\textbf{Udziałowcy}	& \textbf{Cel} & \textbf{Priorytet} \\ \hline% \bottomrule
+	Klient	& Wjechanie na parking & Wysoki \\
+	Klient	& Opuszczenie parkingu & Wysoki \\
+	%Klient	& Wpisanie numeru rejestracyjnego & Wysoki \\
+	%Klient	& Potwierdzenie zdjęcia & Wysoki \\
+	%Klient	& Anulowanie wpisanego numeru rejestracyjnego & Wysoki \\
+	%Klient	& Uiszczenie opłaty & Wysoki \\
+	Operator& Przeglądanie zdjęć & Wysoki \\
+	Właściciel& Wyświetlenie statystyk & Średni \\ \hline
+	\end{tabular}
+\end{table}
 
-\subsection{Jakiś tytuł 2}
+% TODO:
+% "Porównać sposób ich realizacji w aktualnym systemie (np.: manualnym)
+% i systemie proponowanym"
 
-%---------------------------------------------------------------------------
+\section{Granice systemu}
 
-\section{Zawartość pracy}
-\label{sec:zawartoscPracy}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=90mm]{diagramy/graniceSystemu.jpg}
+	\caption{Granice systemu automatyczny parking \label{overflow}}
+\end{figure}
 
-W rodziale~\ref{cha:pierwszyDokument} przedstawiono podstawowe informacje dotyczące struktury dokumentów w \LaTeX u. Alvis~\cite{Alvis2011} jest językiem 
+\section{Lista funkcji systemu}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=90mm]{diagramy/DiagCzynWjazd.jpg}
+	\caption{Diagram czynności: Klient wjeżdża na parking \label{overflow}}
+\end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=90mm]{diagramy/DiagCzynWyjazd.jpg}
+	\caption{Diagram czynności: Klient opuszcza parking \label{overflow}}
+\end{figure}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+% TODO:
+% jeszcze diagram czynności dla Wyświetlania statystyk (Operator, System) 
+% oraz Przeglądania zdjęć (Właściciel, System)
 
 
