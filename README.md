@@ -12,3 +12,6 @@ sudo pacman -S texlive-core texlive-bin texlive-science texlive-latexextra
 ## Linki do wykresów
 
 Zbiór linków to edytowalnych wersji wykresów
+
+1.4 Granice systemu, 1.5 Diagramy czynności (funkcje systemu)
+https://drive.google.com/file/d/17aEuw1gIbz-dxfYbEIZyCbxqy26nZvlS/view?usp=sharing
