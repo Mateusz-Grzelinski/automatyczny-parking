@@ -16,5 +16,5 @@ Zbiór linków to edytowalnych wersji wykresów
 1.4 Granice systemu, 1.5 Diagramy czynności (funkcje systemu)
 https://drive.google.com/file/d/17aEuw1gIbz-dxfYbEIZyCbxqy26nZvlS/view?usp=sharing
 
-2.2 Diagram klas
+2.2 Diagram klas, 2.3 Diagramy stanow
 https://drive.google.com/file/d/1Og7MStHvVxeyqm7A7QDaKDiVJ5_m0kDe/view?usp=sharing
