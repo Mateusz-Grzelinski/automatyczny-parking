@@ -5,14 +5,15 @@
 \section{Cel (przeznaczenie) systemu}
 \label{sec:celePracy}
 
-Celem systemu automatyczny parking jest umożliwienie komputerowej obsługi pobierania opłat za~pozostawienie pojazdu na parkingu na określony czas.
+Celem systemu automatyczny parking jest umożliwienie komputerowej obsługi pobierania opłat za~pozostawienie pojazdu na parkingu na określony czas. System rozpoznaje ze zdjęcia tablice rejestracyjne pojazdów i na tej podstawie umożliwia wjazd samochodów na parking, a także opuszczenie go.
 
 \section{Udziałowcy i użytkownicy}
 
 \begin{list}{$\bullet$}{}
-\item Właściciel
-\item Klient
-\item Operator
+\item Właściciel - posiada parking, jest kierownikiem zarządzającym pracownikami, system prezentuje mu zebrane statystki
+\item Klient - osoba, która korzysta z usług automatycznego parkingu i wjeżdza samochodem na jego teren
+\item Operator - osoba kontrolująca parking w danej chwili, w przypadku błędów, przegląda zarejestrowane zdjęcia i określa czas wjazdu i wyjazdu
+
 \end{list}
 
 \section{Podstawowe cele udziałowców i użytkowników}
@@ -22,12 +23,13 @@ Celem systemu automatyczny parking jest umożliwienie komputerowej obsługi pobi
 	\textbf{Udziałowcy}	& \textbf{Cel} & \textbf{Priorytet} \\ \hline% \bottomrule
 	Klient	& Wjechanie na parking & Wysoki \\
 	Klient	& Opuszczenie parkingu & Wysoki \\
-	%Klient	& Wpisanie numeru rejestracyjnego & Wysoki \\
-	%Klient	& Potwierdzenie zdjęcia & Wysoki \\
-	%Klient	& Anulowanie wpisanego numeru rejestracyjnego & Wysoki \\
-	%Klient	& Uiszczenie opłaty & Wysoki \\
-	Operator& Przeglądanie zdjęć & Wysoki \\
-	Właściciel& Wyświetlenie statystyk & Średni \\ \hline
+	Klient	& Wpisanie numeru rejestracyjnego & Wysoki \\
+	Klient	& Potwierdzenie zdjęcia & Wysoki \\
+	Klient	& Anulowanie wpisanego numeru rejestracyjnego & Średni \\
+	Klient	& Uiszczenie opłaty & Wysoki \\
+	Operator& Przeglądanie zdjęć & Średni \\
+	Operator& Określenie czasu wyjazdu i wyjazdu & Średni \\
+	Właściciel& Wyświetlenie statystyk & Niski \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -37,7 +39,6 @@ W~naszym systemie klient, wjeżdżając na parking, nie musi podjeżdżać do te
 
 
 \section{Granice systemu}
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=90mm]{diagramy/graniceSystemu.pdf}
