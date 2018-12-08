@@ -21,7 +21,7 @@
 	& CzasWjazdu & Czas wjazdu na parking \\
 	& Pojazd & Określa pojazd, którego dotyczy wjazd \\
 	Wyjazd	& DataWyjazdu & Data wyjazdu z parkingu\\
-	& CzasWyjazdu & Czas wjazdu z parkingu \\
+	& CzasWyjazdu & Czas wyjazdu z parkingu \\
 	& Pojazd & Określa pojazd, którego dotyczy wyjazd \\
 	& StatusPlatnosci & Określa, czy płatność została zrealizowana \\
 	Terminal & Status & Status określa możliwość wjazdu/wyjazdu na/z parkingu \\
@@ -50,6 +50,18 @@
 
 \section{Diagramy stanów dla wybranych klas}
 \label{sec:diagStanow}
+% Diagram stanow
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=130mm]{diagramy/DiagStanowWjazd.pdf}
+	\caption{Diagram stanów dla klasy Wjazd \label{overflow}}
+\end{figure}
+% Diagram stanow
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=100mm]{diagramy/DiagStanowWyjazd.pdf}
+	\caption{Diagram stanów dla klasy Wyjazd \label{overflow}}
+\end{figure}
 
 
 
@@ -58,3 +70,13 @@
 \section{Słownik pojęć}
 \label{sec:slownik}
 
+\begin{list}{$\bullet$}{}
+\item System - służy do obsługi automatycznego parkingu, przetwarza zdjęcia, rejestracje pojazdów, oblicza płatności, wykrywa oszustwa, a także zbiera dane statystyczne
+\item Pojazd - należy do klienta, na podstawie rejestracji pojazdu jest on wpuszczany i wypuszczany z parkingu
+\item Wjazd - klasa reprezentująca zdarzenie wjazdu pojazdu na parking
+\item Wyjazd - klasa reprezentująca zdarzenie wyjazdu pojazdu z parkingu
+\item BazaZdjęć - baza posiadająca zdjęcia tablic rejestracyjnych pojazdów aktualnie znajdujących się na parkingu
+\item Operator - pracownik parkingu, identyfikowany na podstawie Id, ma możliwość przeglądania Bazy Zdjęć i ustalania czasu wjazdu/wyjazdu w razie błędu w systemie
+\item Terminal - kieruje szlabanem, zbiera informacje o ilości wolnych miejsc na parkingu, przetworzeniu płatności.
+\item Szlaban - może być otwarty lub zamknięty, jego status zależy od terminala
+\end{list}
