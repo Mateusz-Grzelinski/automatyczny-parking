@@ -31,34 +31,52 @@ Celem systemu automatyczny parking jest umożliwienie komputerowej obsługi pobi
 	\end{tabular}
 \end{table}
 
-% TODO:
-% "Porównać sposób ich realizacji w aktualnym systemie (np.: manualnym)
-% i systemie proponowanym"
+%płatność kartą i gotówką?
+W~aktualnym systemie klient podjeżdża do terminala, naciska przycisk i~odbiera bilet z godziną wjazdu. Przy opuszczaniu parkingu wkłada otrzymany przy wjeździe bilet i~dokonuje opłaty.
+W~naszym systemie klient, wjeżdżając na parking, nie musi podjeżdżać do terminala i~czekać na wydrukowanie kartki z~godziną wjazdu. System zrobi zdjęcie tablicy rejestracyjnej i~sam otworzy szlaban. W~ten sposób oszczędzany jest papier oraz tusz. Operator nie musi dbać o~to żeby ich nie zabrakło. Musi jedynie interweniować w~przypadku oszustwa.
+
 
 \section{Granice systemu}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=90mm]{diagramy/graniceSystemu.jpg}
+	\includegraphics[width=90mm]{diagramy/graniceSystemu.pdf}
 	\caption{Granice systemu automatyczny parking \label{overflow}}
 \end{figure}
 
 \section{Lista funkcji systemu}
 
+
+% Diagram czynności: Klient wjeżdża na parking
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=90mm]{diagramy/DiagCzynWjazd.jpg}
+	\includegraphics[width=90mm]{diagramy/DiagCzynWjazd.pdf}
 	\caption{Diagram czynności: Klient wjeżdża na parking \label{overflow}}
 \end{figure}
 
+
+% Diagram czynności: Klient opuszcza parking
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=90mm]{diagramy/DiagCzynWyjazd.jpg}
+	\includegraphics[width=90mm]{diagramy/DiagCzynWyjazd.pdf}
 	\caption{Diagram czynności: Klient opuszcza parking \label{overflow}}
 \end{figure}
 
-% TODO:
-% jeszcze diagram czynności dla Wyświetlania statystyk (Operator, System) 
-% oraz Przeglądania zdjęć (Właściciel, System)
+
+% Diagram czynności: Operator weryfikuje wykryte oszustwo
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=90mm]{diagramy/DiagCzynWyswietlZdjecia.pdf}
+	\caption{Diagram czynności: Operator weryfikuje wykryte oszustwo \label{overflow}}
+\end{figure}
+
+% Diagram czynnosci: Właściciel wyświetla statystyki
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=90mm]{diagramy/DiagCzynStatystyki.pdf}
+	\caption{Diagram czynności: Właściciel wyświetla statystyki \label{overflow}}
+\end{figure}
+
+
 
 
