@@ -9,26 +9,26 @@
 	\textbf{Klasa}	& \textbf{Atrybut} & \textbf{Opis} \\ \hline% \bottomrule
 	Pojazd	& NumerRejestracyjny & Numer rejestracyjny pojazdu \\
 	& Marka & Marka pojazdu \\
-	& Model & Model pojazdu \\
-	Samochód& & \\
-	Motor& &  \\
-	Autobus& & \\
-	Parking	& IloscWolnychMiejsc & Określa ilość wolnych miejsc na parkingu \\
+	& Model & Model pojazdu \\ \hline
+	Samochód& & \\ \hline
+	Motor& &  \\ \hline
+	Autobus& & \\ \hline
+	Parking	& WolneMiejscaZwykłe & Określa ilość wolnych miejsc dla samochodów na parkingu \\
+	& WolneMiejscaAutobusowe & Określa ilość wolnych miejsc dla autobusów na parkingu \\ \hline
 	MiejsceParkingowe	& Numer & Numer miejsca parkingowego \\
 	& Typ & Typ miejsca parkingowego \\
-	& Status & Określa status miejsca - wolne/zajęte \\
+	& Status & Określa status miejsca - wolne/zajęte \\ \hline
 	Wjazd	& DataWjazdu & Data wjazdu na parking\\
 	& CzasWjazdu & Czas wjazdu na parking \\
-	& Pojazd & Określa pojazd, którego dotyczy wjazd \\
+	& Pojazd & Określa pojazd, którego dotyczy wjazd \\ \hline
 	Wyjazd	& DataWyjazdu & Data wyjazdu z parkingu\\
 	& CzasWyjazdu & Czas wyjazdu z parkingu \\
-	& Pojazd & Określa pojazd, którego dotyczy wyjazd \\
-	& StatusPlatnosci & Określa, czy płatność została zrealizowana \\
-	Terminal & Status & Status określa możliwość wjazdu/wyjazdu na/z parkingu \\
-	Szlaban & Status & Określa, czy szlaban jest otwarty/zamknięty\\
+	& Pojazd & Określa pojazd, którego dotyczy wyjazd \\ \hline
+	Terminal & Status & Status określa możliwość wjazdu/wyjazdu na/z parkingu \\ \hline
+	Szlaban & Status & Określa, czy szlaban jest otwarty/zamknięty\\ \hline
 	Operator& Id & Id operatora \\
 	& Imię & Imię operatora \\
-	& Nazwisko & Nazwisko operatora \\
+	& Nazwisko & Nazwisko operatora \\ \hline
 	BazaZdjęć& &  \\ \hline
 	\end{tabular}
 \end{table}
@@ -72,11 +72,11 @@
 
 \begin{list}{$\bullet$}{}
 \item System - służy do obsługi automatycznego parkingu, przetwarza zdjęcia, rejestracje pojazdów, oblicza płatności, wykrywa oszustwa, a także zbiera dane statystyczne
-\item Pojazd - należy do klienta, na podstawie rejestracji pojazdu jest on wpuszczany i wypuszczany z parkingu
+\item Pojazd - należy do klienta, na podstawie rejestracji pojazdu jest on wpuszczany i~wypuszczany z~parkingu
 \item Wjazd - klasa reprezentująca zdarzenie wjazdu pojazdu na parking
 \item Wyjazd - klasa reprezentująca zdarzenie wyjazdu pojazdu z parkingu
 \item BazaZdjęć - baza posiadająca zdjęcia tablic rejestracyjnych pojazdów aktualnie znajdujących się na parkingu
-\item Operator - pracownik parkingu, identyfikowany na podstawie Id, ma możliwość przeglądania Bazy Zdjęć i ustalania czasu wjazdu/wyjazdu w razie błędu w systemie
-\item Terminal - kieruje szlabanem, zbiera informacje o ilości wolnych miejsc na parkingu, przetworzeniu płatności.
+\item Operator - pracownik parkingu, identyfikowany na podstawie Id, ma możliwość przeglądania Bazy Zdjęć i~ustalania czasu wjazdu/wyjazdu w razie błędu w systemie
+\item Terminal - kieruje szlabanem, zbiera informacje o~ilości wolnych miejsc na parkingu, przetworzeniu płatności.
 \item Szlaban - może być otwarty lub zamknięty, jego status zależy od terminala
 \end{list}

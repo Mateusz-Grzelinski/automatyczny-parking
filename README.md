@@ -18,3 +18,6 @@ https://drive.google.com/file/d/17aEuw1gIbz-dxfYbEIZyCbxqy26nZvlS/view?usp=shari
 
 2.2 Diagram klas, 2.3 Diagramy stanow <br />
 https://drive.google.com/file/d/1Og7MStHvVxeyqm7A7QDaKDiVJ5_m0kDe/view?usp=sharing
+
+3.1 Przypadki użycia <br />
+https://www.draw.io/?state=%7B%22ids%22:%5B%221wz8F_RYJye62k-7pW93ogR7qANtSveoA%22%5D,%22action%22:%22open%22,%22userId%22:%22104827397287133303073%22%7D#G1wz8F_RYJye62k-7pW93ogR7qANtSveoA
