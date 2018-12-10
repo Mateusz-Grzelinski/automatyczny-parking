@@ -35,7 +35,7 @@
 \RequirePackage{enumitem}
 \RequirePackage[all,defaultlines=2]{nowidow} % Kontrola sierot i wdów - działa lepiej niż \widowpenalty i \clubpenalty
 
-\geometry{lmargin=30mm, rmargin=20mm, tmargin=30mm, bmargin=30mm, foot=10mm, head=10mm}
+\geometry{lmargin=20mm, rmargin=20mm, tmargin=30mm, bmargin=30mm, foot=10mm, head=10mm}
 \definecolor{Green}{rgb}{0.1,0.5,0.1}
 
 \def\shorttitlePL#1   {\gdef\@shorttitlePL{#1}}
@@ -61,8 +61,8 @@
 }
 
 \def\thesistable{
-\begin{tabular}{p{45mm}l}
-Autor: & {\itshape \@author}\\[-1mm]
+\begin{tabular}{p{31mm}l}
+Autorzy: & {\itshape \@author}\\[-1mm]
 Kierunek studi\'{o}w: & {\itshape \@degreeprogramme}\\[-1mm]
 Semestr: & {\itshape V}\\[-1mm]
 \end{tabular}
