@@ -18,18 +18,17 @@
 	MiejsceParkingowe	& Numer & Numer miejsca parkingowego \\
 	& Typ & Typ miejsca parkingowego \\
 	& Status & Określa status miejsca - wolne/zajęte \\ \hline
-	Wjazd	& DataWjazdu & Data wjazdu na parking\\
+	PostójNaParkingu & DataWjazdu & Data wjazdu na parking\\
 	& CzasWjazdu & Czas wjazdu na parking \\
-	& Pojazd & Określa pojazd, którego dotyczy wjazd \\ \hline
-	Wyjazd	& DataWyjazdu & Data wyjazdu z parkingu\\
+	& DataWyjazdu & Data wyjazdu z parkingu\\
 	& CzasWyjazdu & Czas wyjazdu z parkingu \\
-	& Pojazd & Określa pojazd, którego dotyczy wyjazd \\ \hline
+	& Pojazd & Określa pojazd, którego dotyczy wjazd \\ \hline
 	Terminal & Status & Status określa możliwość wjazdu/wyjazdu na/z parkingu \\ \hline
 	Szlaban & Status & Określa, czy szlaban jest otwarty/zamknięty\\ \hline
 	Operator& Id & Id operatora \\
 	& Imię & Imię operatora \\
 	& Nazwisko & Nazwisko operatora \\ \hline
-	BazaZdjęć& &  \\ \hline
+	Zdjęcie& &  \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -53,14 +52,14 @@
 % Diagram stanow
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=130mm]{diagramy/DiagStanowWjazd.pdf}
-	\caption{Diagram stanów dla klasy Wjazd \label{overflow}}
+	\includegraphics[width=130mm]{diagramy/DiagStanPostoj.pdf}
+	\caption{Diagram stanów dla klasy PostójNaParkingu \label{overflow}}
 \end{figure}
 % Diagram stanow
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=100mm]{diagramy/DiagStanowWyjazd.pdf}
-	\caption{Diagram stanów dla klasy Wyjazd \label{overflow}}
+	\includegraphics[width=100mm]{diagramy/DiagStanTerminal.pdf}
+	\caption{Diagram stanów dla terminala \label{overflow}}
 \end{figure}
 
 
@@ -73,9 +72,8 @@
 \begin{list}{$\bullet$}{}
 \item System - służy do obsługi automatycznego parkingu, przetwarza zdjęcia, rejestracje pojazdów, oblicza płatności, wykrywa oszustwa, a także zbiera dane statystyczne
 \item Pojazd - należy do klienta, na podstawie rejestracji pojazdu jest on wpuszczany i~wypuszczany z~parkingu
-\item Wjazd - klasa reprezentująca zdarzenie wjazdu pojazdu na parking
-\item Wyjazd - klasa reprezentująca zdarzenie wyjazdu pojazdu z parkingu
-\item BazaZdjęć - baza posiadająca zdjęcia tablic rejestracyjnych pojazdów aktualnie znajdujących się na parkingu
+\item PostójNaParkingu - klasa reprezentująca postój pojazdu na parkingu wraz z wjazdem i wyjazdem
+\item Zdjęcie - zdjęcie tablicy rejestracyjnej pojazdu znajdującego się na parkingu
 \item Operator - pracownik parkingu, identyfikowany na podstawie Id, ma możliwość przeglądania Bazy Zdjęć i~ustalania czasu wjazdu/wyjazdu w razie błędu w systemie
 \item Terminal - kieruje szlabanem, zbiera informacje o~ilości wolnych miejsc na parkingu, przetworzeniu płatności.
 \item Szlaban - może być otwarty lub zamknięty, jego status zależy od terminala
