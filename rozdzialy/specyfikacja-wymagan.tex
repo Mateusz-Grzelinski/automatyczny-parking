@@ -46,6 +46,11 @@ Tablica rejestracyjna zostaje potwierdzona przez klienta, płatność zostaje po
 \end{enumerate}
 \hspace{0cm}\textbf{Scenariusz alternatywny: }
 \begin{enumerate}
+	\item[5.a] Klient nie potwierdza zdjęcia rejestracji
+	\item[5.a.1] Następuje powrót do punktu 1 scenariusza głównego
+\end{enumerate}
+\hspace{0cm}\textbf{Scenariusz alternatywny: }
+\begin{enumerate}
 \item[8.a] Płatność nie została przetworzona poprawnie
 \item[8.a.1] Następuje powrót do punktu 6 scenariusza głównego 
 \end{enumerate}
@@ -70,7 +75,7 @@ System przetwarzający obraz poprawnie odczytuje tablicę rejestracyjną, szlaba
 \hspace{0cm}\textbf{Scenariusz główny: }
 \begin{enumerate}
 \item System przetwarzający obraz robi zdjęcie
-\item System przetwarzający obraz odczytuje tablicę rejestracyjnę
+\item System przetwarzający obraz odczytuje tablicę rejestracyjną
 \item System automatycznego parkingu zapisuje datę i czas wjazdu pojazdu
 \item Szlaban otwiera się (include: UC4)
 \item Klient wjeżdża na parking
@@ -130,7 +135,7 @@ Rejestracja pojazdu została poprawnie odczytana przy wjeździe
 \item[5.a.1] Następuje powrót do punktu 1 scenariusza głównego
 \end{enumerate}
 
-\subsection{Prezentacja staystyk (identyfikator: UC8)}
+\subsection{Prezentacja statystyk (identyfikator: UC8)}
 \textbf{Aktorzy: }Właściciel
 
 \hspace{0cm}\textbf{Zakres: }System automatycznego parkingu
@@ -151,7 +156,7 @@ Właściciel musi być zalogowany
 \hspace{0cm}\textbf{Scenariusz główny: }
 \begin{enumerate}
 \item System wyświetla rodzaje statystyk do wyboru: dzienne, miesięczne, roczne
-\item Właściciel wybiera odpowiedni rodzaj statystk
+\item Właściciel wybiera odpowiedni rodzaj statystyk
 \item System oblicza wybrane statystyki
 \item System prezentuje wyniki
 \end{enumerate}
