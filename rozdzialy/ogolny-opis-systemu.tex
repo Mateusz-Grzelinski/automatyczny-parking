@@ -12,7 +12,7 @@ Celem systemu automatyczny parking jest umożliwienie komputerowej obsługi pobi
 \begin{list}{$\bullet$}{}
 \item Właściciel - posiada parking, jest kierownikiem zarządzającym pracownikami, system prezentuje mu zebrane statystki
 \item Klient - osoba, która korzysta z usług automatycznego parkingu i wjeżdza samochodem na jego teren
-\item Operator - osoba kontrolująca parking w danej chwili, w przypadku błędów, przegląda zarejestrowane zdjęcia i poprawia czas wjazdu/wyjazdu, wprowadza rejestrację pojazdu do systemu oraz w~wyjątkowych sytuacjach podnosi/opuszcza szlaban
+\item Operator - osoba kontrolująca parking w danej chwili, w przypadku błędów, przegląda i wybiera zarejestrowane zdjęcia, wprowadza rejestrację pojazdu do systemu oraz w~wyjątkowych sytuacjach podnosi/opuszcza szlaban
 
 \end{list}
 
@@ -61,7 +61,8 @@ W~naszym systemie klient, wjeżdżając na parking, nie musi podjeżdżać do te
 	\item Obliczenie kwoty do zapłaty
 	\item Wyświetlenie kwoty do zapłaty
 	\item Oczekiwanie na pojazd do 15 minut
-	\item Zgłoszenie niezgodności wpisanej i zarejestrowanej rejestracji
+	\item Zgłoszenie błędu odczytu zdjęcia
+	\item Zgłoszenie błędu odczytu rejestracji
 	\item Wyświetlenie wpisanego przez klienta numeru rejestracyjnego
 	\item Zapis danych
 	\item Prezentacja statystyk
@@ -85,11 +86,11 @@ W~naszym systemie klient, wjeżdżając na parking, nie musi podjeżdżać do te
 \end{figure}
 
 
-% Diagram czynności: Operator weryfikuje wykryte oszustwo
+% Diagram czynności: Operator przegląda zdjęcia
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=90mm]{diagramy/DiagCzynWyswietlZdjecia.pdf}
-	\caption{Diagram czynności: Operator weryfikuje wykryte oszustwo}
+	\includegraphics[width=90mm]{diagramy/DiagCzynWeryfikacja.pdf}
+	\caption{Diagram czynności: Operator poprawia błąd systemu}
 \end{figure}
 
 % Diagram czynnosci: Właściciel wyświetla statystyki
@@ -99,6 +100,13 @@ W~naszym systemie klient, wjeżdżając na parking, nie musi podjeżdżać do te
 	\caption{Diagram czynności: Właściciel wyświetla statystyki}
 \end{figure}
 
+
+% Diagram czynnosci: Podnoszenie/opuszczanie diagramu przez operatora
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=90mm]{diagramy/DiagCzynSzlaban.pdf}
+	\caption{Diagram czynności: Podnoszenie/opuszczanie diagramu przez operatora}
+\end{figure}
 
 
 

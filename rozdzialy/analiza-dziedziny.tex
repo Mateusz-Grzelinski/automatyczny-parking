@@ -7,24 +7,17 @@
 \begin{table}[H]
 	\begin{tabular}{|l|l|l|} \hline
 	\textbf{Klasa}	& \textbf{Atrybut} & \textbf{Opis} \\ \hline% \bottomrule
-	Pojazd	& NumerRejestracyjny & Numer rejestracyjny pojazdu \\
-	& Marka & Marka pojazdu \\
-	& Model & Model pojazdu \\ \hline
+	Pojazd	& NumerRejestracyjny & Numer rejestracyjny pojazdu \\ \hline
 	Samochód& & \\ \hline
 	Motor& &  \\ \hline
 	Autobus& & \\ \hline
 	Parking	& WolneMiejscaZwykłe & Określa ilość wolnych miejsc dla samochodów na parkingu \\
 	& WolneMiejscaAutobusowe & Określa ilość wolnych miejsc dla autobusów na parkingu \\ \hline
-	MiejsceParkingowe	& Numer & Numer miejsca parkingowego \\
-	& Typ & Typ miejsca parkingowego \\
-	& Status & Określa status miejsca - wolne/zajęte \\ \hline
 	PostójNaParkingu & DataWjazdu & Data wjazdu na parking\\
 	& CzasWjazdu & Czas wjazdu na parking \\
 	& DataWyjazdu & Data wyjazdu z parkingu\\
 	& CzasWyjazdu & Czas wyjazdu z parkingu \\
 	& Pojazd & Określa pojazd, którego dotyczy wjazd \\ \hline
-	Terminal & Status & Status określa możliwość wjazdu/wyjazdu na/z parkingu \\ \hline
-	Szlaban & Status & Określa, czy szlaban jest otwarty/zamknięty\\ \hline
 	Operator& Id & Id operatora \\
 	& Imię & Imię operatora \\
 	& Nazwisko & Nazwisko operatora \\ \hline
@@ -52,14 +45,8 @@
 % Diagram stanow
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=130mm]{diagramy/DiagStanPostoj.pdf}
+	\includegraphics[width=130mm]{diagramy/DiagStanow.pdf}
 	\caption{Diagram stanów dla klasy PostójNaParkingu}
-\end{figure}
-% Diagram stanow
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=100mm]{diagramy/DiagStanTerminal.pdf}
-	\caption{Diagram stanów dla terminala}
 \end{figure}
 
 
@@ -70,11 +57,15 @@
 \label{sec:slownik}
 
 \begin{list}{$\bullet$}{}
-\item System - służy do obsługi automatycznego parkingu, przetwarza zdjęcia, rejestracje pojazdów, oblicza płatności, wykrywa oszustwa, a także zbiera dane statystyczne
+\item Klient - wprowadza rejestracje do systemu, potwierdza zdjęcie oraz dokonuje płatności w systemie
+\item Operator - pracownik parkingu, identyfikowany na podstawie Id, ma możliwość przeglądania i wyboru zdjęć w przypadku błędu w systemie oraz poprawy rejestracji
+\item Parking - przechowuje informacje dotyczące ilości wolnych miejsc (zwykłych lub autobusowych)
 \item Pojazd - należy do klienta, na podstawie rejestracji pojazdu jest on wpuszczany i~wypuszczany z~parkingu
 \item PostójNaParkingu - klasa reprezentująca postój pojazdu na parkingu wraz z wjazdem i wyjazdem
+\item System - służy do obsługi automatycznego parkingu, oblicza płatności, zgłasza błędy odczytu zdjęcia lub rejestracji, a także zbiera dane statystyczne
+\item System przetwarzający obraz - zewnętrzny system, robi zdjęcia, przetwarza je oraz zwraca rejestracje naszego systemu
+\item Szlaban - może być otwarty lub zamknięty, jego status ustalany jest przez system
+\item Terminal - kieruje szlabanem, zbiera informacje o~ilości wolnych miejsc na parkingu, pośredniczy w przetwarzaniu płatności
+\item Właściciel - ma możliwość przeglądania statystyk po wcześniejszym zalogowaniu się do systemu
 \item Zdjęcie - zdjęcie tablicy rejestracyjnej pojazdu znajdującego się na parkingu
-\item Operator - pracownik parkingu, identyfikowany na podstawie Id, ma możliwość przeglądania Bazy Zdjęć i~ustalania czasu wjazdu/wyjazdu w razie błędu w systemie
-\item Terminal - kieruje szlabanem, zbiera informacje o~ilości wolnych miejsc na parkingu, przetworzeniu płatności.
-\item Szlaban - może być otwarty lub zamknięty, jego status zależy od terminala
 \end{list}
